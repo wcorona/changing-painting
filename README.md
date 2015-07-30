@@ -1,6 +1,7 @@
-============================================
-Changing Painting: A generic deployment tool
-============================================
+[![GitHub version](https://badge.fury.io/gh/wcorona%2Fchanging-painting.svg)](http://badge.fury.io/gh/wcorona%2Fchanging-painting)
+=================
+Changing Painting
+=================
 
 Overview
 --------
