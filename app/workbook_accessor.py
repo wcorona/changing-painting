@@ -2,7 +2,7 @@ __author__ = 'William Coronado'
 
 import xml.etree.ElementTree as ET
 
-filename = '/Users/williamcoronado/Documents/My Tableau Repository/Workbooks/Australian Budget 2015-2016.twb'
+filename = '../tests/data/Australian_Budget_2015-2016.xml'
 
 tree = ET.parse(filename)
 root = tree.getroot()

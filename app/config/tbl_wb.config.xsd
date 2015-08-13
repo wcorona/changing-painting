@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:user="http://www.tableausoftware.com/xml/user">
+  <xs:import namespace="http://www.tableausoftware.com/xml/user" schemaLocation="user.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:element name="workbook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="datasources"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:decimal"/>
+      <xs:attribute ref="xml:base" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="datasources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="datasource"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="datasource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="repository-location"/>
+          <xs:element ref="connection"/>
+          <xs:element ref="overridable-settings"/>
+          <xs:element ref="aliases"/>
+          <xs:element maxOccurs="unbounded" ref="column"/>
+        </xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element maxOccurs="unbounded" ref="group"/>
+          <xs:element ref="drill-paths"/>
+          <xs:element maxOccurs="unbounded" ref="folder"/>
+        </xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="extract"/>
+          <xs:element ref="layout"/>
+          <xs:element ref="semantic-values"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="inline" type="xs:boolean"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="version" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

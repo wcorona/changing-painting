@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook>
+    <datasources>
+        <datasource caption='Budget 2015-16 PBS' name='textscan.42166.867342094900'>
+            <connection>
+                <directory>/new/directory</directory>
+                <filename>New_Filename.twb.xml</filename>
+            </connection>
+
+        </datasource>
+    </datasources>
+</workbook>
